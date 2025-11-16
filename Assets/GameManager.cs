@@ -22,6 +22,13 @@ public class GameManager : MonoBehaviour
         {
             rioInstance = Instantiate(rioPrefab, spawnPosition, Quaternion.identity);
             
+            RioStatus rioStatus = rioInstance.GetComponent<RioStatus>();
+            if (rioStatus == null)
+            {
+                rioStatus = rioInstance.AddComponent<RioStatus>();
+            }
+            rioStatus.isAlive = true;
+            
             Trap trapManager = FindObjectOfType<Trap>();
             if (trapManager != null)
             {
@@ -32,9 +39,19 @@ public class GameManager : MonoBehaviour
     
     void SetupRioManager()
     {
-        if (rioManagerObject != null && rioInstance != null)
+        if (rioInstance == null) return;
+        
+        if (rioManagerObject != null)
         {
-            follow followScript = rioManagerObject.GetComponent<follow>();
+            Follow followScript = rioManagerObject.GetComponent<Follow>();
+            if (followScript != null)
+            {
+                followScript.player = rioInstance.transform;
+            }
+        }
+        else
+        {
+            Follow followScript = FindObjectOfType<Follow>();
             if (followScript != null)
             {
                 followScript.player = rioInstance.transform;
@@ -48,7 +65,6 @@ public class GameManager : MonoBehaviour
         {
             SetRioAlive(rioInstance, false);
             rioInstance.transform.position = spawnPosition;
-            StartCoroutine(SetRioAliveAfterDelay(rioInstance, true, 0.1f));
         }
     }
     
@@ -56,23 +72,13 @@ public class GameManager : MonoBehaviour
     {
         if (rioInstance != null)
         {
-            MonoBehaviour[] scripts = rioInstance.GetComponents<MonoBehaviour>();
-            foreach (MonoBehaviour script in scripts)
+            RioStatus rioStatus = rioInstance.GetComponent<RioStatus>();
+            if (rioStatus == null)
             {
-                var field = script.GetType().GetField("isAlive");
-                if (field != null && field.FieldType == typeof(bool))
-                {
-                    field.SetValue(script, isAlive);
-                    break;
-                }
+                rioStatus = rioInstance.AddComponent<RioStatus>();
             }
+            rioStatus.isAlive = isAlive;
         }
-    }
-    
-    IEnumerator SetRioAliveAfterDelay(GameObject rioInstance, bool isAlive, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        SetRioAlive(rioInstance, isAlive);
     }
 }
 
