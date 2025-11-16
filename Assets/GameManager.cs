@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SpawnRio();
+        SetupRioManager();
     }
     
     void SpawnRio()
@@ -20,73 +21,58 @@ public class GameManager : MonoBehaviour
         if (rioPrefab != null)
         {
             rioInstance = Instantiate(rioPrefab, spawnPosition, Quaternion.identity);
-            AddCollisionHandlerToAll(rioInstance);
             
-            if (rioManagerObject != null)
+            Trap trapManager = FindObjectOfType<Trap>();
+            if (trapManager != null)
             {
-                follow followScript = rioManagerObject.GetComponent<follow>();
-                if (followScript != null)
+                trapManager.AddCollisionHandlerToRio(rioInstance, spawnPosition);
+            }
+        }
+    }
+    
+    void SetupRioManager()
+    {
+        if (rioManagerObject != null && rioInstance != null)
+        {
+            follow followScript = rioManagerObject.GetComponent<follow>();
+            if (followScript != null)
+            {
+                followScript.player = rioInstance.transform;
+            }
+        }
+    }
+    
+    public void ResetRioPosition(GameObject rioInstance, Vector3 spawnPosition)
+    {
+        if (rioInstance != null)
+        {
+            SetRioAlive(rioInstance, false);
+            rioInstance.transform.position = spawnPosition;
+            StartCoroutine(SetRioAliveAfterDelay(rioInstance, true, 0.1f));
+        }
+    }
+    
+    void SetRioAlive(GameObject rioInstance, bool isAlive)
+    {
+        if (rioInstance != null)
+        {
+            MonoBehaviour[] scripts = rioInstance.GetComponents<MonoBehaviour>();
+            foreach (MonoBehaviour script in scripts)
+            {
+                var field = script.GetType().GetField("isAlive");
+                if (field != null && field.FieldType == typeof(bool))
                 {
-                    followScript.player = rioInstance.transform;
+                    field.SetValue(script, isAlive);
+                    break;
                 }
             }
         }
     }
     
-    void AddCollisionHandlerToAll(GameObject obj)
+    IEnumerator SetRioAliveAfterDelay(GameObject rioInstance, bool isAlive, float delay)
     {
-        Rigidbody rb = obj.GetComponent<Rigidbody>();
-        if (rb == null)
-        {
-            rb = obj.AddComponent<Rigidbody>();
-            rb.freezeRotation = true;
-            rb.interpolation = RigidbodyInterpolation.Interpolate;
-        }
-        else
-        {
-            rb.interpolation = RigidbodyInterpolation.Interpolate;
-        }
-        
-        RioCollisionHandler handler = obj.AddComponent<RioCollisionHandler>();
-        handler.gameManager = this;
-        handler.rioGameObject = rioInstance;
-    }
-    
-    public void ResetRioPosition()
-    {
-        if (rioInstance != null)
-        {
-            rioInstance.transform.position = spawnPosition;
-        }
-    }
-}
-
-public class RioCollisionHandler : MonoBehaviour
-{
-    public GameManager gameManager;
-    public GameObject rioGameObject;
-    
-    void OnCollisionEnter(Collision collision)
-    {
-        CheckSpearCollision(collision.gameObject);
-    }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        CheckSpearCollision(other.gameObject);
-    }
-    
-    void CheckSpearCollision(GameObject obj)
-    {
-        if (rioGameObject != null && (obj == rioGameObject || obj.transform.IsChildOf(rioGameObject.transform)))
-        {
-            return;
-        }
-        
-        if (obj.layer == LayerMask.NameToLayer("spear") || obj.CompareTag("spear"))
-        {
-            gameManager.ResetRioPosition();
-        }
+        yield return new WaitForSeconds(delay);
+        SetRioAlive(rioInstance, isAlive);
     }
 }
 
