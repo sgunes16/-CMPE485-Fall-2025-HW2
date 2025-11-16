@@ -64,13 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/AurynSky/Dungeon Pack/Scripts/SpikeTrapDemo.cs" />
+    <Compile Include="Assets/Trap.cs" />
     <Compile Include="Assets/Skeleton.cs" />
     <Compile Include="Assets/SazenGames/Skeleton/Scripts/SimpleCameraController.cs" />
     <Compile Include="Assets/follow.cs" />
     <Compile Include="Assets/SazenGames/Skeleton/Scripts/AnimationReplayer.cs" />
     <Compile Include="Assets/GameManager.cs" />
-    <Compile Include="Assets/CameraWallFade.cs" />
-    <Compile Include="Assets/neww.cs" />
     <Compile Include="Assets/AurynSky/Dungeon Pack/Scripts/TrapDoorDemo.cs" />
     <Compile Include="Assets/PlayerScript.cs" />
   </ItemGroup>
