@@ -67,6 +67,7 @@
     <Compile Include="Assets/Trap.cs" />
     <Compile Include="Assets/Skeleton.cs" />
     <Compile Include="Assets/follow.cs" />
+    <Compile Include="Assets/SkeletonManager.cs" />
     <Compile Include="Assets/GameManager.cs" />
     <Compile Include="Assets/AurynSky/Dungeon Pack/Scripts/TrapDoorDemo.cs" />
     <Compile Include="Assets/PlayerScript.cs" />

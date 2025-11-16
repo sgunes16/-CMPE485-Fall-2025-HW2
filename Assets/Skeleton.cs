@@ -12,15 +12,27 @@ public class Skeleton : MonoBehaviour
     
     public MovementAxis movementAxis = MovementAxis.Z;
     public float moveSpeed = 10f;
+    public float visionRange = 10f;
+    public float visionAngle = 45f;
+    public int visionRayCount = 5;
+    public float visionCheckInterval = 0.5f;
     
     private Vector3 moveDirection;
     private Rigidbody rb;
     private bool canCollide = true;
+    private int mazeLayer;
     
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.freezeRotation = true;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
+        }
+        mazeLayer = LayerMask.NameToLayer("maze");
         UpdateMoveDirection();
+        StartCoroutine(VisionCheck());
     }
     
     void UpdateMoveDirection()
@@ -37,8 +49,10 @@ public class Skeleton : MonoBehaviour
     
     void Move()
     {
+        if (rb == null) return;
+        
         Vector3 newVelocity = moveDirection * moveSpeed;
-        newVelocity.y = rb.velocity.y;
+        newVelocity.y = 0f;
         rb.velocity = newVelocity;
         
         if (moveDirection != Vector3.zero)
@@ -63,6 +77,70 @@ public class Skeleton : MonoBehaviour
         canCollide = false;
         yield return new WaitForSeconds(0.2f);
         canCollide = true;
+    }
+    
+    GameObject GetRioObject(GameObject hitObject)
+    {
+        if (hitObject.name.Contains("Rio") || hitObject.CompareTag("Player") || hitObject.GetComponent<PlayerScript>() != null)
+        {
+            return hitObject.transform.root.gameObject;
+        }
+        
+        Transform parent = hitObject.transform.parent;
+        while (parent != null)
+        {
+            if (parent.name.Contains("Rio") || parent.CompareTag("Player") || parent.GetComponent<PlayerScript>() != null)
+            {
+                return parent.gameObject;
+            }
+            parent = parent.parent;
+        }
+        
+        return null;
+    }
+    
+    IEnumerator VisionCheck()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(visionCheckInterval);
+            
+            Vector3 rayOrigin = transform.position + Vector3.up * 5f;
+            Vector3 forward = transform.forward;
+            
+            float angleStep = visionAngle / (visionRayCount - 1);
+            float startAngle = -visionAngle / 2f;
+            
+            for (int i = 0; i < visionRayCount; i++)
+            {
+                float angle = startAngle + (angleStep * i);
+                Vector3 rayDirection = Quaternion.Euler(0, angle, 0) * forward;
+                
+                RaycastHit hit;
+                bool hasHit = Physics.Raycast(rayOrigin, rayDirection, out hit, visionRange);
+                
+                if (hasHit)
+                {
+                    GameObject hitObject = hit.collider.gameObject;
+                    
+                    if (hitObject.layer == mazeLayer)
+                    {
+                        continue;
+                    }
+                    
+                    GameObject rioObject = GetRioObject(hitObject);
+                    if (rioObject != null)
+                    {
+                        GameManager gameManager = FindObjectOfType<GameManager>();
+                        if (gameManager != null)
+                        {
+                            gameManager.ResetRioPosition(rioObject, gameManager.spawnPosition);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
     
     void Update()

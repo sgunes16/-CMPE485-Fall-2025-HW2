@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     public float moveSpeed = 8f;
     public float sprintSpeed = 15f;
     public float rotationSpeed = 90f;
+    public float strafeSpeedMultiplier = 0.5f;
 
     private Rigidbody rb;
     private Animator animator;
