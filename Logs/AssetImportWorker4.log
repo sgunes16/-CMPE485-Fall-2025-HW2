@@ -2569,3 +2569,186 @@ Start importing Assets/follow.cs using Guid(ff844c907e2e245eea94a3416d400a1c) Im
  -> (artifact id: '7fb88ec3023b03f843302f092cf3f2f2') in 0.000498 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 51.624600 seconds.
+  path: Assets/Rust Key/Scene
+  artifactKey: Guid(4c1e3a14ff99f4149a1f89be82fa7afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rust Key/Scene using Guid(4c1e3a14ff99f4149a1f89be82fa7afd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '200f4e92681e3a6722bfaf080a9291a2') in 0.008129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.423859 seconds.
+  path: Assets/Rust Key/Textures
+  artifactKey: Guid(8a41d48411dedd14fa89781315cfd94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rust Key/Textures using Guid(8a41d48411dedd14fa89781315cfd94e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '48c90424076b7f5c3a6988eb5592855e') in 0.000501 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 2.559566 seconds.
+  path: Assets/Rust Key/Mesh
+  artifactKey: Guid(f955c40fdedbcd44c81021b1b657ce57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Rust Key/Mesh using Guid(f955c40fdedbcd44c81021b1b657ce57) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '0e31c5ceedb0d3259896abd1d2cc2dc8') in 0.001272 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.060781 seconds.
+  path: Assets/Phoenix3D/UpgradeRenderPipeline
+  artifactKey: Guid(e7e1b4aa9da43554db6a290aa23ea733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/UpgradeRenderPipeline using Guid(e7e1b4aa9da43554db6a290aa23ea733) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4c3292b8a7402c9d7f92235b271f382f') in 0.007319 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 24.950635 seconds.
+  path: Assets/Phoenix3D/Textures/Outdoor_Wall_T05
+  artifactKey: Guid(5d9479f9a3837484c87325e338872170) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/Textures/Outdoor_Wall_T05 using Guid(5d9479f9a3837484c87325e338872170) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1754227c0da48074bd0f7d5a084eb3dc') in 0.001611 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.344662 seconds.
+  path: Assets/Phoenix3D/Textures/Outdoor_Wall_T01
+  artifactKey: Guid(48b7de4f7678d634bbfed055272d2415) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/Textures/Outdoor_Wall_T01 using Guid(48b7de4f7678d634bbfed055272d2415) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '7c5d5c7217b468adbc2d5d29322e3e60') in 0.000801 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.510664 seconds.
+  path: Assets/Phoenix3D/Textures/Outdoor_Wall_T02
+  artifactKey: Guid(27b031f6e27c5eb459ba9d939de26961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/Textures/Outdoor_Wall_T02 using Guid(27b031f6e27c5eb459ba9d939de26961) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'bd5adeba35470d2fba5e138b49aebda6') in 0.000712 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.881773 seconds.
+  path: Assets/Phoenix3D/Textures/Outdoor_Wall_T07
+  artifactKey: Guid(a25105b9807755f46984ded1085e00ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/Textures/Outdoor_Wall_T07 using Guid(a25105b9807755f46984ded1085e00ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '4c26aadf79933096cf7009ac7f92a2c9') in 0.000871 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 3.034233 seconds.
+  path: Assets/Phoenix3D/Textures/Outdoor_Wall_T16
+  artifactKey: Guid(310ec6b2104e3994a91a403e5bcbe4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/Textures/Outdoor_Wall_T16 using Guid(310ec6b2104e3994a91a403e5bcbe4a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'f7596f3cd0ea419a95305d53df9e1272') in 0.000877 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 21.845984 seconds.
+  path: Assets/Phoenix3D/Materials
+  artifactKey: Guid(925f1c26ecf295c4d835010db7d048af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Phoenix3D/Materials using Guid(925f1c26ecf295c4d835010db7d048af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a198ca7604036219f3fe67ddad4afc66') in 0.001660 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 15.896427 seconds.
+  path: Assets/SazenGames/Skeleton/Demo
+  artifactKey: Guid(08dd7177e3a632849ad683f0f14a7fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SazenGames/Skeleton/Demo using Guid(08dd7177e3a632849ad683f0f14a7fa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '988383c002dd121e46db96133a6a31ef') in 0.006370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 4.126785 seconds.
+  path: Assets/SazenGames/Skeleton/Scripts
+  artifactKey: Guid(6409761abef22b94aad2d133acf35727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SazenGames/Skeleton/Scripts using Guid(6409761abef22b94aad2d133acf35727) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '9e9d9aaa12b84d63daa3a59bce7a03dd') in 0.000807 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x16ef2b000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.364 seconds
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.809 seconds
+Domain Reload Profiling: 1174ms
+	BeginReloadAssembly (124ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (191ms)
+		LoadAssemblies (237ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (21ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (5ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (809ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (341ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (33ms)
+			ProcessInitializeOnLoadAttributes (292ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (2ms)
+Refreshing native plugins compatible for Editor in 1.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3266 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (101.0 KB). Loaded Objects now: 4255.
+Memory consumption went from 432.0 MB to 431.9 MB.
+Total: 2.691417 ms (FindLiveObjects: 0.124542 ms CreateObjectMapping: 0.041833 ms MarkObjects: 2.485667 ms  DeleteObjects: 0.038541 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/applyshader.cs: a55547a024739ecb24765f3d2d7643b6 -> 
+  custom:scripting/monoscript/fileName/GhostScript.cs: e32199c9228bf481867ab542bda26af3 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: d4a85370cfe14d0fa2d45faee928b1c9 -> 7b45393f7227894d85256322c01c777e
+========================================================================
+Received Import Request.
+  Time since last request: 55.981764 seconds.
+  path: Assets/AurynSky/Dungeon Pack/Scenes
+  artifactKey: Guid(68a21c45c4bfee348bbd4a248eec55fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AurynSky/Dungeon Pack/Scenes using Guid(68a21c45c4bfee348bbd4a248eec55fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '1f0ebe73db081c90a13c05aaa9192cfc') in 0.031933 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
