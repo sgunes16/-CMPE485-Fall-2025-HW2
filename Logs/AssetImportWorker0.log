@@ -4884,3 +4884,79 @@ AssetImportParameters requested are different than current active one (requested
   custom:scripting/monoscript/fileName/Trap.cs: 3c5493e1d46c04db895de48ef58fcfea -> 852f9e373325c49734dfd2bf45c4d300
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:scripting/precompiled-assembly-types:Assembly-CSharp: 488fcf39a3503ffdc56fa904087be126 -> 29462f7ebcb94f12baa219c7fb1925a4
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+Thread 0x16dd77000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.997 seconds
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.138 seconds
+Domain Reload Profiling: 2138ms
+	BeginReloadAssembly (605ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (222ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (326ms)
+		LoadAssemblies (608ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (29ms)
+			TypeCache.Refresh (17ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1139ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (392ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (34ms)
+			ProcessInitializeOnLoadAttributes (335ms)
+			ProcessInitializeOnLoadMethodAttributes (14ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 0.99 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3284 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (0.7 MB). Loaded Objects now: 4778.
+Memory consumption went from 0.68 GB to 0.68 GB.
+Total: 3.350375 ms (FindLiveObjects: 0.169792 ms CreateObjectMapping: 0.048708 ms MarkObjects: 2.783500 ms  DeleteObjects: 0.347583 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/GameManager.cs: f6182d712e34e20e3202214886862cdb -> 9933fbcc6190e2a9171c2ec8808a053e
+  custom:scripting/monoscript/fileName/SoundManager.cs: 97b8b7f19e31a376baf624982cbfe12a -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:scripting/monoscript/fileName/UIManager.cs: 619f5747dc184f3577c898ec321c40d4 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/RioStatus.cs: 5776ea680b3d4e3de07456b08e381638 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/TrapDoorDemo.cs: 4c5ce49034c09bd5af5f04c7da91ff83 -> ce633fd6cc306641c23c004880ce07d7
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/PlayerScript.cs: 22eb798644525adc2043f4fafedb2a00 -> 0594854d06e1cf776e340655129ecf0c
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:scripting/monoscript/fileName/SkeletonManager.cs: e178e0b799acb8f804eb5d4682975f60 -> b16a12b430d3dfaaf9a57ef320b90992
+  custom:scripting/monoscript/fileName/KeyDoorManager.cs: 62cb95351f21a4237d688f0e288aa173 -> 0a36f5e78f15a9336f9b060761836996
+  custom:scripting/monoscript/fileName/SpikeTrapDemo.cs: dfdd0f63a3ea6402ce00364977d2fbfb -> 25e073208470d77c436b87bc77dc96b2
+  custom:scripting/monoscript/fileName/Follow.cs: f65317532e8b00ff0038606517779045 -> 20f0b54aea7555d49e79add4d3992158
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/Skeleton.cs: 0c30a75d81028dc869a30f1e8066e559 -> a87400f9d1f55b53fdfa4f3625df4344
+  custom:scripting/monoscript/fileName/Trap.cs: 3c5493e1d46c04db895de48ef58fcfea -> 852f9e373325c49734dfd2bf45c4d300
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 488fcf39a3503ffdc56fa904087be126 -> 29462f7ebcb94f12baa219c7fb1925a4
